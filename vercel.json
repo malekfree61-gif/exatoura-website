@@ -7,10 +7,16 @@
     {
       "src": "project/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "photos/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     { "src": "/project/(.*)", "dest": "/project/$1" },
+    { "src": "/photos/(.*)", "dest": "/photos/$1" },
+    { "src": "/html/(.*)", "dest": "/html/$1" },
     { "src": "/(.+)$", "dest": "/html/$1" },
     { "src": "/", "dest": "/html/index.html" }
   ]
